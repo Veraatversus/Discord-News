@@ -1,7 +1,7 @@
 on:
   rss:
    config:
-      every: 5 * * * *
+      every: 60 * * * *
    url: http://feeds.gw2info.net/news.de.xml
 jobs:
   discord:
