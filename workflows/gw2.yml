@@ -1,0 +1,28 @@
+on:
+  rss:
+   config:
+      every: 5 * * * *
+    url: 
+      - http://feeds.gw2info.net/news.de.xml
+      - 
+jobs:
+  discord:
+    name: Send a message to discord
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          DISCORD_USERNAME: NewsBot
+          DISCORD_EMBEDS: {
+            "embeds": [{
+            "title": "${{on.rss.outputs.title}}",
+            "url": "${{on.rss.outputs.link}}",
+            "author": "${{on.rss.outputs.author}}"
+            "description": "${{on.rss.outputs.contentSnippet}}",
+            "content": "${{toJSON(on.rss.outputs}}",
+            "timestamp": "${{toJSON(on.rss.outputs.pubDate}}"
+            }]
+          }
+        uses: Ilshidur/action-discord@master
+}'
