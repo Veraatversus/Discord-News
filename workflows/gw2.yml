@@ -16,7 +16,7 @@ jobs:
             "embeds": [{
             "title": "${{on.rss.outputs.title}}",
             "url": "${{on.rss.outputs.link}}",
-            "author": "${{on.rss.outputs.author}}"
+            "author": "${{on.rss.outputs.author}}",
             "description": "${{on.rss.outputs.contentSnippet}}",
             "content": "${{toJSON(on.rss.outputs}}",
             "timestamp": "${{toJSON(on.rss.outputs.pubDate}}"
