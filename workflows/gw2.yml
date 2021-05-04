@@ -23,4 +23,3 @@ jobs:
             }]
           }
         uses: Ilshidur/action-discord@master
-}'
