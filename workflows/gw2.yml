@@ -24,4 +24,4 @@ jobs:
           }
         uses: Ilshidur/action-discord@master
         with:
-          args: "${{env.DISCORD_EMBEDS}}"
+          args: "This is a test messages from Veraatversus ${{env.DISCORD_EMBEDS}}"
