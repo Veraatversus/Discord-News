@@ -2,7 +2,7 @@ on:
   rss:
    config:
       every: 5 * * * *
-    url: http://feeds.gw2info.net/news.de.xml
+   url: http://feeds.gw2info.net/news.de.xml
 jobs:
   discord:
     name: Send a message to discord
