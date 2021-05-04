@@ -23,3 +23,5 @@ jobs:
             }]
           }
         uses: Ilshidur/action-discord@master
+        with:
+          args: "${{DISCORD_EMBEDS}}",
